@@ -23,26 +23,3 @@
 </html>
 
 
-
-<!-- this is without tailwind -->
- <%#
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Logout</title>
-</head>
-<body>
-  <% if (name) { %>
-    <-- the name is fetching from cookies through the controller -->
-    <h1>You are successfully logged out
-        <%= name %>!</h1> 
-    <h4>If want to login again - </h4>
-    <form action="/login" method="get">
-      <button type="submit">Login</button>
-    </form>
-  <% } else { %>
-    <h1>You are not logged in. Please <a href="/login">login</a>.</h1>
-  <% } %>
-</body>
-</html>
-%>

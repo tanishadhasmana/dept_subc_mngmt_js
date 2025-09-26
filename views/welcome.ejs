@@ -21,27 +21,3 @@
 </body>
 </html>
 
-
-
-<!-- this is without tailwind  -->
- <%#
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Welcome</title>
-</head>
-<body>
-
-  <% if (name) { %>
-    <!-- the name is fetching from cookies through the controller -->
-    <h1>Welcome, You are successfully logged in <%= name %>!</h1> 
-    <form action="/logout" method="get">
-      <button type="submit">Logout</button>
-    </form>
-  <% } else { %>
-    <h1>You are not logged in. Please <a href="/login">login</a>.</h1>
-  <% } %>
-
-</body>
-</html>
-%>
