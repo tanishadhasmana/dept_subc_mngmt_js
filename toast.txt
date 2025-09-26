@@ -1,0 +1,39 @@
+toast notification- https://sweetalert2.github.io/
+
+1. Install SweetAlert2- as we using EJS, so instead using npm i, we can use CDN script for every EJS file as, <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+***** we also have react tostify library for react.
+
+
+
+should install -
+npm install -D typescript ts-node @types/node @types/express @types/cookie-parser @types/jsonwebtoken @types/bcrypt
+npm install express cookie-parser jsonwebtoken bcrypt knex mysql2 ejs
+
+--------set up TS---------
+install first using-
+ npm install --save-dev typescript ts-node @types/node @types/express @types/cookie-parser @types/jsonwebtoken @types/bcrypt
+
+then make tsconfig.json-
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}
+
+
+-----------when we use the TS-------
+1 step is to change the , const this = require(' '), an all, to the import st(S)
+2 step is to add the types, with the st(S) as, if req: request, it is the type of req, commming from the express
+3 is to change the export st(s), from module.exports = router; of js to, export default router;of ts.
+
+--to add the tailwind css to the ejs pages as--
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">

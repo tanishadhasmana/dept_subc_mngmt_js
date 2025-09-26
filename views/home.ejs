@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-purple-100 via-pink-100 to-yellow-100 min-h-screen flex items-center justify-center">
+
+  <div class="text-center p-8 bg-white rounded-xl shadow-lg">
+    <% if (name) { %>
+      <h1 class="text-3xl font-bold text-purple-700 mb-4">Welcome back, <%= name %>!</h1>
+      <a href="/logout" class="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">Logout</a>
+    <% } else { %>
+      <h1 class="text-2xl font-semibold text-gray-800 mb-4">Hi, welcome! Please login first.</h1>
+      <form action="/login" method="get">
+        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">Login</button>
+      </form>
+    <% } %>
+  </div>
+
+</body>
+</html>
+
+
+
+<!-- Without typescript -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+</head>
+<body>
+  <% if (name) { %>
+    <h1>Welcome back, <%= name %>!</h1>
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <h1>Hi, welcome this is login page. Please login first.</h1>
+    <form action="/login"  method="get">
+      <button type="submit">Login</button>
+    </form>
+  <% } %>
+</body>
+</html> -->

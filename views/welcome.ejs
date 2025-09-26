@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-yellow-100 via-orange-100 to-pink-100 min-h-screen flex items-center justify-center">
+
+  <div class="text-center p-8 bg-white rounded-xl shadow-lg">
+    <% if (name) { %>
+      <h1 class="text-3xl font-bold text-yellow-700 mb-4">Welcome, <%= name %>! You are successfully logged in</h1>
+      <form action="/logout" method="get">
+        <button type="submit" class="px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700 transition">Logout</button>
+      </form>
+    <% } else { %>
+      <h1 class="text-2xl font-semibold text-gray-800">You are not logged in. Please <a href="/login" class="text-yellow-500 underline">login</a>.</h1>
+    <% } %>
+  </div>
+
+</body>
+</html>
+
+
+
+<!-- this is without tailwind  -->
+ <%#
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+</head>
+<body>
+
+  <% if (name) { %>
+    <!-- the name is fetching from cookies through the controller -->
+    <h1>Welcome, You are successfully logged in <%= name %>!</h1> 
+    <form action="/logout" method="get">
+      <button type="submit">Logout</button>
+    </form>
+  <% } else { %>
+    <h1>You are not logged in. Please <a href="/login">login</a>.</h1>
+  <% } %>
+
+</body>
+</html>
+%>
