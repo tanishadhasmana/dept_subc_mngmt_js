@@ -8,7 +8,7 @@ const welcomeRoute = require('./routes/welcomeRoute');
 const logoutRoute = require("./routes/logoutRoute");
 
 const app = express();
-const PORT = 3005;
+const PORT = process.env.PORT || 3005;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
